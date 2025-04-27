@@ -1,7 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Lopes | Portfólio</title>
+
+    <meta name="description" content="Portfólio de Miguel Lopes - Desenvolvedor Web apaixonado por criar interfaces intuitivas e soluções eficientes com foco em Front-End e Back-End">
+    <meta name="keywords" content="desenvolvedor, programador, web, front-end, back-end, full stack, portfolio, java, javascript">
+    <meta name="author" content="Miguel Lopes">
+
+    <meta property="og:title" content="Miguel Lopes | Portfólio">
+    <meta property="og:description" content="Desenvolvedor apaixonado por tecnologia e soluções eficientes">
+    <meta property="og:image" content="https://site.com/assets/img/sua-foto.jpg">
+    <meta property="og:url" content="https://site.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Miguel Lopes | Portfólio">
+    <meta name="twitter:description" content="Desenvolvedor Web com foco em criar interfaces intuitivas e soluções eficientes">
+    <meta name="twitter:image" content="https://site.com/assets/img/sua-foto.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div id="particles-js"></div>
+<header>
+    <h1 id="nome-titulo">Miguel Lopes</h1>
+    <span id="typewriter"></span>
+    <nav>
+        <a href="#sobre" data-i18n="about_me">Sobre Mim</a>
+        <a href="#projetos" data-i18n="my_projects">Meus Projetos</a>
+        <a href="#contato" data-i18n="contact">Contato</a>
+    </nav>
+</header>
+<main>
+    <section id="sobre">
+        <img src="assets/img/foto.jpg" alt="Miguel Lopes" class="foto-perfil">
+        <h2 data-i18n="about_me">Sobre Mim</h2>
+        <p data-i18n="biography"></p>
+        <div class="techs">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>Spring</span>
+        </div>
+    </section>
+    <section id="projetos">
+        <h2 data-i18n="my_projects">Meus Projetos</h2>
+        <div class="projeto-lista">
+            <div class="projeto">
+                <h3 data-i18n="project1_title">Blogify</h3>
+                <p data-i18n="project1_desc">
+                    <a class="link-literal" href="https://desafio-blog-desenvolvedor-pleno.vercel.app/" target="_blank"
+                       rel="noopener" data-i18n="site_link">Blog criado como parte de um desafio full stack.</a>
+                </p>
+                <a href="https://github.com/MiguelLopesDel/Desafio-Blog-Desenvolvedor-Pleno" target="_blank"
+                   rel="noopener" data-i18n="github_project">Projeto no Github</a>
+            </div>
+            <div class="projeto">
+                <h3 data-i18n="project2_title">Omnipotent Mod</h3>
+                <p data-i18n="project2_desc">Desenvolvi esse mod para Minecraft Forge 1.12.2 e já são mais de 13 mil
+                    linhas de Java!</p>
+                <a href="https://github.com/GodMode-Studio/Omnipotent-mod" target="_blank" rel="noopener"
+                   data-i18n="github_project">Projeto no Github</a>
+            </div>
+            <div class="projeto">
+                <h3 data-i18n="project3_title">Desafio API Transação Itaú</h3>
+                <p data-i18n="project3_desc">Desafio de back-end do Itaú, criando uma API RESTful para transações usando
+                    Java/Spring Boot.</p>
+                <a href="https://github.com/MiguelLopesDel/Transaction-Api-Desafio-Itau"
+                   target="_blank" rel="noopener" data-i18n="github_project">Projeto no Github</a>
+            </div>
+            <div class="projeto">
+                <h3 data-i18n="project4_title">API de Agendamento</h3>
+                <p data-i18n="project4_desc">Projeto para um desafio de back-end, feito com Java, Spring Boot, Docker e
+                    Swagger.</p>
+                <a href="https://github.com/MiguelLopesDel/api-agendamento-notificacao"
+                   target="_blank" rel="noopener" data-i18n="github_project">Projeto no Github</a>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <h2 data-i18n="contact">Contato</h2>
+        <div class="redes">
+            <a href="https://github.com/MiguelLopesDel" target="_blank" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                     alt="GitHub" width="32" height="32"/>
+            </a>
+            <a href="#" id="email-link" aria-label="E-mail">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="E-mail" width="32"
+                     height="32"/>
+            </a>
+            <!--            <a href="https://www.linkedin.com/in/linkedin" target="_blank" aria-label="LinkedIn">-->
+            <!--                <img src="assets/img/linkedin.svg" alt="LinkedIn" width="32" height="32"/>-->
+            <!--            </a>-->
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Miguel Lopes. Todos os direitos reservados.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<canvas id="explosions-canvas"></canvas>
+<script src="i18n.js"></script>
+<script src="script.js" type="module"></script>
+<script>
+    document.getElementById('email-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        const user = 'contatomiguellopesdel';
+        const domain = 'gmail.com';
+        window.location.href = `mailto:${user}@${domain}`;
+    });
+</script>
 </body>
 </html>
