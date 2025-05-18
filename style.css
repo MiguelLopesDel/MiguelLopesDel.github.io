@@ -253,6 +253,7 @@ body::before {
     border-radius: 50%;
     border: 3px solid var(--acc);
     object-fit: cover;
+    object-position: center 80%;
     margin-bottom: 1rem;
     box-shadow: 0 6px 24px #64ffda32;
     display: block;
